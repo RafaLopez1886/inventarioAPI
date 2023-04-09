@@ -7,10 +7,10 @@ import {getInventario, postInventario,postEstadoEquipo, postMarcaEquipo, postTip
 
 const enrutador = Router();
 
+
 enrutador.get('/inventarioget', getInventario)
 
 //Rutas para envío de datos a BBDD
-
 enrutador.post('/inventariopost', postInventario)
 enrutador.post('/estadopost', postEstadoEquipo)
 enrutador.post('/marcapost', postMarcaEquipo)

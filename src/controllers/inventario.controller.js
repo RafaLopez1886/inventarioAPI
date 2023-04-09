@@ -1,5 +1,6 @@
 import {datosConexion} from '../db.js'
 
+//Query para obtener datos de inventario
 export const getInventario = async (req, res) => {
     
     const [filas] = await datosConexion.query('SELECT * FROM inventario');
