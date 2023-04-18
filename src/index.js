@@ -17,10 +17,6 @@ inventario.use(express.json())
 
 inventario.use(inventarioRuta)//Llamamos las rutas de Inventario
 
-inventario.use(cors({
-    allowedOrigins:'*',
-}))
-
 
 inventario.listen(PORT);//Se establece el puerto por el que el servidor Node va a escuchar
 

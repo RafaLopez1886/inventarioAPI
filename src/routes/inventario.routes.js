@@ -2,11 +2,16 @@
 
 import { Router } from "express";
 
+import cors from "cors";
+
 import {getInventario, postInventario,postEstadoEquipo, postMarcaEquipo, postTipoEquipo, 
     postUsuariosEquipo, updateInventario, updateEstadoequipo, updateMarcaEquipo, updateUsuariosEquipo, updateTipoEquipo} from '../controllers/inventario.controller.js'
 
 const enrutador = Router();
 
+//const cors = require('cors')
+
+enrutador.use(cors())
 
 enrutador.get('/inventarioget', getInventario)
 

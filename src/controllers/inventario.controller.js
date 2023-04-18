@@ -3,7 +3,7 @@ import {datosConexion} from '../db.js'
 //Query para obtener datos de inventario
 export const getInventario = async (req, res) => {
     
-    const [filas] = await datosConexion.query('SELECT * FROM inventario');
+    const [filas] = await datosConexion.query('SELECT ieq_idRegInventario, ieq_serial, ieq_modelo, ieq_descripcion, ieq_urlImagen, ieq_color, DATE_FORMAT(ieq_fechaCompra, "%d-%m-%Y") AS ieq_fechaCompra, ieq_precio, usuariosequipo.ueq_nombre, marcaequipo.meq_nombre, estadoequipo.eeq_nombre, tipoequipo.teq_nombre FROM inventario INNER JOIN usuariosequipo ON inventario.fk_ieq_usuarioACargo = usuariosequipo.ueq_idUsuariosEquipo INNER JOIN marcaequipo ON inventario.fk_ieq_marcaNombre = marcaequipo.meq_idMarcaEquipo INNER JOIN estadoequipo ON inventario.fk_ieq_estadoEquipo = estadoequipo.eeq_idEstadoEquipo INNER JOIN tipoequipo ON inventario.fk_ieq_tipoEquipo = tipoequipo.teq_idTipoEquipo ORDER BY ieq_idRegInventario ASC');
     res.json(filas);
 
 }
