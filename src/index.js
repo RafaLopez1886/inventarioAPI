@@ -1,4 +1,4 @@
-console.log("Hello World!"); //Prueba de ejecución desde Node
+console.log("Estamos listos!"); //Prueba de ejecución desde Node
 import express from "express"; //Express permite el trabajo de comunicación entre servicios con módulos
 import inventarioRuta from './routes/inventario.routes.js' //Importamos rurtas de Inventario
 import {pong} from './controllers/index.controller.js'

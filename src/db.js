@@ -5,6 +5,7 @@ import {
     DB_DATABASE,
     DB_PASSWORD,
     DB_USER
+    
 } from './config.js'
 
 //Datos de mi conexión
